@@ -5,6 +5,7 @@ flask-socketio
 flask-cors
 werkzeug
 pyjwt
+psycopg2
 gunicorn
 eventlet
 gevent
