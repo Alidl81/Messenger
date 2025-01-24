@@ -1,24 +1,23 @@
 from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
-from flask_socketio import SocketIO, join_room, leave_room, send
+from flask_socketio import SocketIO, join_room, leave_room, send, emit
 from flask_cors import CORS
 import os
 from werkzeug.utils import secure_filename
 from datetime import datetime
 import jwt
+
 app = Flask(__name__)
 CORS(app)
-app.config['SECRET_KEY'] = 'your_secret_key_here'
+app.config['SECRET_KEY'] = '96278fbe9fd9c3c498040d653c964d9b'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///messenger.db'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5 MB limit
 
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
-
-
-socketio = SocketIO(app, cors_allowed_origins="*", async_mode='threading')  # Change here
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 # Models
 class User(db.Model):
@@ -153,4 +152,4 @@ def handle_typing(data):
 
 if __name__ == '__main__':
     db.create_all()
-    socketio.run(app, host="0.0.0.0", port=5000, debug=True)
+    socketio.run(app, debug=True)
