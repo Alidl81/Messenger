@@ -11,7 +11,7 @@ import jwt
 app = Flask(__name__)
 CORS(app)
 app.config['SECRET_KEY'] = '96278fbe9fd9c3c498040d653c964d9b'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:74fvcopI26GwyF29DJNqYt1N0vcIvKnJ@dpg-cu9t04bqf0us73c4p480-a:5432/MessengerDB'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admin:74fvcopI26GwyF29DJNqYt1N0vcIvKnJ@dpg-cu9t04bqf0us73c4p480-a:5432/messengerdb_os0s'
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///messenger.db'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5 MB limit
