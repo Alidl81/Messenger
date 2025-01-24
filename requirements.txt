@@ -2,6 +2,9 @@ flask
 flask-sqlalchemy
 flask-bcrypt
 flask-socketio
+flask-cors
+werkzeug
+pyjwt
 gunicorn
 eventlet
 gevent
