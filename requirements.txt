@@ -1,8 +1,9 @@
-Flask
-Flask-SocketIO
-eventlet
+flask
+flask_sqlalchemy
+flask_socketio
 gunicorn
-psycopg2
-Flask-Bcrypt
-Flask-Cors
+eventlet
+flask_bcrypt
+flask_cors
 werkzeug
+psycopg2  
