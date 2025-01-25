@@ -9,7 +9,7 @@ from datetime import datetime
 import jwt
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.config['SECRET_KEY'] = '96278fbe9fd9c3c498040d653c964d9b'
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('postgresql://postgres:NTsIghXnFJZQqyPfnvqsQDAnfrcefbYc@postgres.railway.internal:5432/railway', 'postgresql://postgres:NTsIghXnFJZQqyPfnvqsQDAnfrcefbYc@postgres.railway.internal:5432/railway')
