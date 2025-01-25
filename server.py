@@ -162,6 +162,7 @@ def handle_typing(data):
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()  
+    
     # socketio.run(app, host="0.0.0.0", port=8080, debug=True)
-    server = pywsgi.WSGIServer(('0.0.0.0', 8080), app, handler_class=WebSocketHandler)
+    server = pywsgi.WSGIServer(('0.0.0.0', 10000), app, handler_class=WebSocketHandler)
     server.serve_forever()
