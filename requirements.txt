@@ -7,4 +7,6 @@ flask_bcrypt
 flask_cors
 werkzeug
 psycopg2  
+gevent
+gevent-websocket
 jwt
