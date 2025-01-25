@@ -12,7 +12,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 app.config['SECRET_KEY'] = '96278fbe9fd9c3c498040d653c964d9b'
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('postgresql://postgres:NTsIghXnFJZQqyPfnvqsQDAnfrcefbYc@postgres.railway.internal:5432/railway', 'postgresql://postgres:NTsIghXnFJZQqyPfnvqsQDAnfrcefbYc@postgres.railway.internal:5432/railway')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:NTsIghXnFJZQqyPfnvqsQDAnfrcefbYc@junction.proxy.rlwy.net:42870/railway'
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # 5 MB limit
 
