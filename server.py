@@ -164,5 +164,5 @@ if __name__ == '__main__':
         db.create_all()  
     
     # socketio.run(app, host="0.0.0.0", port=8080, debug=True)
-    server = pywsgi.WSGIServer(('0.0.0.0', 10000), app, handler_class=WebSocketHandler)
+    server = pywsgi.WSGIServer(('0.0.0.0', 5432), app, handler_class=WebSocketHandler)
     server.serve_forever()
